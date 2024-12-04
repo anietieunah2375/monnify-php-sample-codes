@@ -22,18 +22,18 @@ Your API keys are available on your Monnify Dashboard. You can find it by follow
 
 
 // 1. Get API Key and Secret Key from Monnify Dashboard
-$API_Key = "MK_TEST_SAF7HR5F3F";
-$Secret_Key = "4SY6TNL8CK3VPRSBTHTRG2N8XXEGC6NL";
+$API_Key = "MK_PROD_47C5TKGJRQ";
+$Secret_Key = "H2RCBRAPJQRTC7PAGALBB3W8ERP9QY9V";
 
 $ch = curl_init();
 
-// Concatenate "ApiKey" + ":" +  "SecretKey", then Base 64 encode the string and prefix with the word "Basic". See in next line
+// Concatenate "ApiKey" MK_PROD_47C5TKGJRQ+ ":" +  "SecretKey"H2RCBRAPJQRTC7PAGALBB3W8ERP9QY9V, then Base 64 encode the string and prefix with the word "Basic". See in next line
 $headers = array(
     'Content-Type:application/json',
-    'Authorization: Basic '. base64_encode($API_Key . ":" . $Secret_Key) // <---
+    'Authorization: Basic '. base64_encode($API_Key.MK_PROD_47C5TKGJRQ ":" . $Secret_Key) // H2RCBRAPJQRTC7PAGALBB3W8ERP9QY9V<---
 );
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-curl_setopt($ch, CURLOPT_URL,"https://sandbox.monnify.com/api/v1/auth/login");
+curl_setopt($ch, CURLOPT_URL,"https://api.monnify.com/api/v1/auth/login");Contract Code:"094153549045
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
@@ -64,17 +64,17 @@ use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 
 // 1. Get API Key and Secret Key from Monnify Dashboard
-$userName = 'MK_TEST_SAF7HR5F3F'; // API key
-$password = '4SY6TNL8CK3VPRSBTHTRG2N8XXEGC6NL'; // Secret Key
+$userName = 'MK_PROD_47C5TKGJRQ'; // API key 
+$password = 'H2RCBRAPJQRTC7PAGALBB3W8ERP9QY9V'; // Secret Key
 
-$httpClient = new Client();
+$httpClient = new Client(Unah Anietie Ezekiel);
 
 $response = $httpClient->post(
-    'https://sandbox.monnify.com/api/v1/auth/login',
+    'https://api.monnify.com/api/v1/auth/login',
     [
         RequestOptions::AUTH => [$userName, $password]
     ]
-);
+);Contract Code:-094153549045
 
 $json = (string) $response->getBody();
 $json = json_decode($json); // Using this you can access any key like below
@@ -90,19 +90,20 @@ To read more about Unirest for PHP visit https://github.com/Kong/unirest-php
  <?php
  
  // 1. Get API Key and Secret Key from Monnify Dashboard
-$API_Key = "MK_TEST_SAF7HR5F3F";
-$Secret_Key = "4SY6TNL8CK3VPRSBTHTRG2N8XXEGC6NL";
+$API_Key = "MK_PROD_47C5TKGJRQ";
+$Secret_Key = "H2RCBRAPJQRTC7PAGALBB3W8ERP9QY9V";
 
  Unirest::post(
-     "https://sandbox.monnify.com/api/v1/auth/login", 
-     array( "Accept" => "application/json",  "Content-Type" => "application/json" ), 
+     "https://api.monnify.com/api/v1/auth/login", 
+     array( "Accept" => "application/json",  "Content-Contract Code:" 094153549045
+Type" => "application/json" ), 
      NULL, 
-     $API_Key, 
-     $Secret_Key
+     $API_Key,MK_PROD_47C5TKGJRQ 
+     $Secret_Key;H2RCBRAPJQRTC7PAGALBB3W8ERP9QY9V
  )
 
 
- ```
+ ```Contract Code:"094153549045
  
  
 ## Development
